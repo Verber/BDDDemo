@@ -8,7 +8,7 @@ use Behat\Mink\Mink,
     Behat\MinkExtension\Context\MinkContext;
 
 //require_once 'PHPUnit/Autoload.php';
-require_once 'PHPUnit/Framework/Assert/Functions.php';
+//require_once 'PHPUnit/Framework/Assert/Functions.php';
 
 class GuiContext extends MinkContext
 {
