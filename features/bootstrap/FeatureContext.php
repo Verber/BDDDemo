@@ -7,6 +7,11 @@ use Behat\Behat\Context\ClosuredContextInterface,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
+use Behat\Mink\Mink,
+    Behat\Mink\Session,
+    Behat\Mink\Driver\Selenium2Driver,
+    Behat\MinkExtension\Context\MinkContext;
+
 //
 // Require 3rd-party libraries here:
 //
@@ -17,23 +22,8 @@ use Behat\Gherkin\Node\PyStringNode,
 /**
  * Features context.
  */
-class FeatureContext extends BehatContext
+class FeatureContext extends MinkContext
 {
-    /**
-     * Initializes context.
-     * Every scenario gets it's own context object.
-     *
-     * @param array $parameters context parameters (set them up through behat.yml)
-     */
-    public function __construct(array $parameters)
-    {
-        // Initialize your context here
-        $this->useContext(
-            'gui',
-            new GuiContext($parameters)
-        );
-    }
-
 //
 // Place your definition and hook methods here:
 //
